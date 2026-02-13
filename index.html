@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Guild PSIKOPAT ID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, #2c2c2c 0%, #000000 100%);
+            font-family: 'Orbitron', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Efek Background Grid */
+        .bg-grid {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 215, 0, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 215, 0, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+        }
+
+        /* Container Undangan */
+        .invite-box {
+            width: 350px;
+            background: rgba(20, 20, 20, 0.95);
+            border: 2px solid #FFD700; /* Warna Emas FF */
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), inset 0 0 50px rgba(0, 0, 0, 0.8);
+            position: relative;
+            animation: popIn 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* Header FF Style */
+        .ff-header {
+            font-family: 'Bangers', cursive;
+            font-size: 40px;
+            color: #FFD700;
+            text-shadow: 3px 3px 0px #000, 0 0 10px #FFD700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .guild-badge {
+            background: linear-gradient(45deg, #ff0000, #8b0000);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+        }
+
+        .message-title {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        /* Tombol Keren */
+        .btn-open {
+            background: linear-gradient(to bottom, #FFD700, #FFA500);
+            border: none;
+            padding: 15px 30px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 16px;
+            color: #000;
+            cursor: pointer;
+            clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+            transition: all 0.3s;
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+        }
+
+        .btn-open:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #FFD700;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 215, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+        }
+
+        /* Konten Prank (Hidden Awalnya) */
+        #prank-content {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .monkey-img {
+            width: 200px;
+            border-radius: 10px;
+            border: 3px solid red;
+            margin-bottom: 10px;
+        }
+
+        .prank-text {
+            font-family: 'Bangers', cursive;
+            font-size: 24px;
+            color: #ff4444;
+            text-transform: uppercase;
+            animation: shake 0.5s infinite;
+        }
+
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="bg-grid"></div>
+
+    <div class="invite-box">
+        <div class="ff-header">FREE FIRE</div>
+        <div class="guild-badge">GUILD INVITATION</div>
+        
+        <div id="initial-content">
+            <h2 style="color: #FFD700; margin: 10px 0;">PSIKOPAT ID</h2>
+            <p class="message-title">You have received a special invitation from the Guild Leader.</p>
+            <button class="btn-open" onclick="openPrank()">BUKA PESAN RAHASIA</button>
+        </div>
+
+        <div id="prank-content">
+            <!-- Gambar Monyet Lokal -->
+            <img src="monyet.jpg" class="monkey-img" alt="Monyet">
+            <p class="prank-text">YANG BACA KAYA MONYED<br>AOKWKWK 🐒🤣</p>
+            <p style="font-size: 12px; color: #888; margin-top: 10px;">(Canda bang, jangan baper aowkwsk)</p>
+            <button class="btn-open" style="margin-top: 15px; font-size: 12px; padding: 10px;" onclick="location.reload()">TUTUP</button>
+        </div>
+    </div>
+
+    <script>
+        function openPrank() {
+            // Sembunyikan konten awal
+            document.getElementById('initial-content').style.display = 'none';
+            // Tampilkan konten prank
+            document.getElementById('prank-content').style.display = 'block';
+            
+            // Mainkan suara (opsional, browser modern memblokir autoplay jadi harus klik dulu)
+            // var audio = new Audio('https://www.myinstants.com/media/sounds/laughing-sound-effect.mp3');
+            // audio.play();
+        }
+    </script>
+
+</body>
+</html>
